@@ -1,0 +1,125 @@
+/* ********** VARIABLES ********** */
+
+:root {
+  --main:  Arimo, sans-serif;
+  --title: VT323, monospace;
+
+  --dark:       hsl(  0,   0%,  1%);
+  --light:      hsl(  0,   0%, 99%);
+  --danger:     hsl(  0, 100%, 50%);
+  --warning:    hsl( 30, 100%, 50%);
+  --success:    hsl(120, 100%, 50%);
+  --info:       hsl(240, 100%, 50%);
+
+  --radius: 10px;
+  --width: 300px;
+}
+
+/* ********** GLOBAL ********** */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 20px;
+  font-family: var(--main);
+  text-align: center;
+  background: var(--dark);
+}
+
+main,
+form {
+  display: flex;
+  flex-flow: column;
+  place-items: center;
+  gap: 30px;
+}
+
+/* ********** HEADING ********** */
+
+hgroup {
+  max-width: 375px;
+
+  h1,
+  b {
+    font-family: var(--title);
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: var(--light);
+  }
+
+  p {
+    font-size: 1.4rem;
+    color: var(--warning);
+  }
+
+  b {
+    font-size: 3rem;
+  }
+}
+
+/* ********** FORM ********** */
+
+form {
+
+  label {
+    font-weight: bold;
+  }
+
+  input,
+  button {
+    border: none;
+    border-radius: var(--radius);
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+  }
+
+  input {
+    max-width: var(--width);
+    text-align: center;
+  }
+
+  button {
+    background: var(--success);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: scale(0.95);
+      transition: transform 500ms;
+    }
+  }
+}
+
+/* ********** OUTPUT ********** */
+
+output {
+  border-radius: var(--radius);
+  width: var(--width);
+  background: var(--light);
+
+  &.result,
+  &.error {
+    padding: 10px;
+  }
+
+  &.result {
+    font-size: 1.2rem;
+    color: var(--info);
+  }
+
+  &.error {
+    font-size: 1.8rem;
+    color: var(--danger);
+  }
+
+  data {
+    display: block;
+    line-height: 1.5;
+  }
+}
