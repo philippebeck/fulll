@@ -1,0 +1,31 @@
+{
+  "name": "vehicule-fleet-parking-management",
+  "version": "0.1.0",
+  "description": "Node project about Vehicle Fleet Parking Management as Fulll hiring test",
+  "keywords": [
+    "backend",
+    "bdd",
+    "cqrs",
+    "Node",
+    "typescript",
+    "sqlite3",
+    "Cucumber"
+  ],
+  "main": "fleet",
+  "scripts": {
+    "test": "cucumber-js --profile default"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.3.0",
+    "@types/cucumber": "^6.0.1",
+    "@types/node": "^14.0.27",
+    "ts-node": "10.9.2",
+    "typescript": "^4.5.4"
+  },
+  "repository": "https://github.com/philippebeck/fulll-tests",
+  "license": "Apache-2.0",
+  "author": "Philippe Beck"
+}
