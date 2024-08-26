@@ -30,7 +30,7 @@ export class Fleet implements FleetInterface {
    * @returns {Fleet}
    *  The fleet
    */
-  constructor(id: string, userId: string = '') {
+  constructor(id: string, userId = '') {
     this.id     = id
     this.userId = userId
   }

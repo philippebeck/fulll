@@ -93,7 +93,7 @@ export class VehicleQuery {
     plateNumber: string,
     lat: number,
     lng: number,
-    alt: number = 0
+    alt = 0
   ): Promise<Vehicle> => {
 
     this.vehicle = await this.getVehicle(plateNumber)

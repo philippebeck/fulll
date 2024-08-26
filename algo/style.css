@@ -1,15 +1,15 @@
 /* ********** VARIABLES ********** */
 
 :root {
-  --main:  Arimo, sans-serif;
-  --title: VT323, monospace;
+  --main:  arimo, sans-serif;
+  --title: vt323, monospace;
 
-  --dark:       hsl(  0,   0%,  1%);
-  --light:      hsl(  0,   0%, 99%);
-  --danger:     hsl(  0, 100%, 50%);
-  --warning:    hsl( 30, 100%, 50%);
-  --success:    hsl(120, 100%, 50%);
-  --info:       hsl(240, 100%, 50%);
+  --dark:       hsl(  0deg   0%  1%);
+  --light:      hsl(  0deg   0% 99%);
+  --danger:     hsl(  0deg 100% 50%);
+  --warning:    hsl( 30deg 100% 50%);
+  --success:    hsl(120deg 100% 50%);
+  --info:       hsl(240deg 100% 50%);
 
   --radius: 10px;
   --width: 300px;

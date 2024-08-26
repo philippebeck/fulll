@@ -56,7 +56,7 @@ export class Vehicle implements VehicleInterface {
    * @returns {Vehicle}
    *  The vehicle
    */
-  constructor(id: string, fleetId: string = '', plateNumber: string = '') {
+  constructor(id: string, fleetId = '', plateNumber = '') {
     this.id          = id
     this.fleetId     = fleetId
     this.plateNumber = plateNumber

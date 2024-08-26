@@ -1,12 +1,15 @@
 # [back/ddd/cqrs] Vehicle fleet parking management
 
 ## Requirements
+
 To run this project you will need a computer with Node, Typescript and Cucumber installed.
 
 ## Install
+
 To install the project, you just have to run `yarn install` to get all the dependencies
 
 ## Running the tests
+
 After installing the dependencies you can run the tests with this command `yarn test`.
 
 ## Instructions
@@ -97,7 +100,6 @@ Feature: Park a vehicle
 
 Note : We use DDD and suggest its use but all modern architectures (Clean architecture, Hexagonal architecture, Port and Adapters, ...) are acceptable
 
-
 #### Tips
 
 - Try to first write bdd/gherkin tests, then implement the code.
@@ -132,7 +134,6 @@ Please wrap the part 1 into a complete application. We want:
 
 - For code quality, you can use some tools : which one and why (in a few words) ?
 - you can consider to setup a ci/cd process : describe the necessary actions in a few words
-
 
 #### Evaluation
 

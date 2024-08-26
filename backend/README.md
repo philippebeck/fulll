@@ -56,7 +56,8 @@ It will create a `data.db` file in the backend directory
 
 ## Code quality & maintainability
 
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5b1ae06834dc4e96b4cd4764fc738a85)](https://app.codacy.com/gh/philippebeck/fulll-tests/dashboard)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1212b3e47fbe12b002dd/maintainability)](https://codeclimate.com/github/philippebeck/fulll-tests/maintainability)
 
 ## Project structure
 
