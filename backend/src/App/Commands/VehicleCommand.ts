@@ -43,8 +43,7 @@ export class VehicleCommand {
     const plateRegex   = new RegExp(/^[A-Z0-9]{6,8}$/g)
     const plateMessage = 'The plate number must only contain alpha-numeric characters, between 6 & 8 length!'
 
-    if (!fleetId)     return 'Please provide a fleetId!'
-    if (!plateNumber) return 'Please provide a vehicle plate number!'
+    if (!fleetId || !plateNumber) return 'Please provide a fleetId & a vehicle plate number!'
 
     plateNumber = plateNumber.toUpperCase()
 
@@ -87,9 +86,9 @@ export class VehicleCommand {
     alt: string | undefined = "0"
   ): Promise<string> => {
 
-    if (!fleetId)     return 'Missing fleetId !'
-    if (!plateNumber) return 'Missing vehicle plate number!'
-    if (!lat || !lng) return 'Missing latitude and/or longitude!'
+    if (!fleetId || !plateNumber || !lat || !lng) {
+      return 'Please provide a fleetId, a vehicle plate number, a latitude & a longitude!'
+    }
 
     plateNumber = plateNumber.toUpperCase()
 
@@ -97,9 +96,13 @@ export class VehicleCommand {
     const longitude = parseFloat(lng.trim())
     const altitude  = parseFloat(alt.trim())
 
-    if (latitude < -90   || latitude > 90)   return 'Latitude must be between -90 & 90 degres!'
-    if (longitude < -180 || longitude > 180) return 'Longitude must be between -180 & 180 degres!'
-    if (altitude < 0     || altitude > 6000) return 'Altitude must be between 0 & 6000 meters!'
+    let message = ''
+
+    if (latitude < -90   || latitude > 90)   message = 'Latitude must be between -90 & 90 degres!'
+    if (longitude < -180 || longitude > 180) message = 'Longitude must be between -180 & 180 degres!'
+    if (altitude < 0     || altitude > 6000) message = 'Altitude must be between 0 & 6000 meters!'
+
+    if (message) return message
 
     const vehicle = await this.vehicleQuery.parkVehicle(plateNumber, latitude, longitude, altitude)
 
