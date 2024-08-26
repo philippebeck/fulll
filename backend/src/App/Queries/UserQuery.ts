@@ -29,7 +29,7 @@ export class UserQuery {
    */
   constructor() {
     this.userModel = new UserModel()
-    this.user      = new User(crypto.randomUUID())
+    this.user      = new User(crypto.randomUUID() as string)
   }
 
   /**

@@ -16,7 +16,7 @@ const run = async (): Promise<void> => {
   const args    = process.argv.slice(3)
 
   await createDB('data.db')
-  handleCommand(COMMAND, args).then((stdout) => console.log(stdout))
+  void handleCommand(COMMAND, args).then((stdout) => { console.log(stdout) })
 }
 
 /**
@@ -66,4 +66,4 @@ const handleCommand = async (command: string | undefined, args: string[]): Promi
   }
 }
 
-run()
+void run()
