@@ -29,7 +29,14 @@ export class FleetQuery {
    */
   constructor() {
     this.fleetModel = new FleetModel()
-    this.fleet      = new Fleet(crypto.randomUUID() as string)
+
+    try {
+      const id   = crypto.randomUUID() as string
+      this.fleet = new Fleet(id)
+
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   /**

@@ -29,7 +29,14 @@ export class VehicleQuery {
    */
   constructor() {
     this.vehicleModel = new VehicleModel()
-    this.vehicle      = new Vehicle(crypto.randomUUID() as string)
+
+    try {
+      const id     = crypto.randomUUID() as string
+      this.vehicle = new Vehicle(id)
+
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   /**

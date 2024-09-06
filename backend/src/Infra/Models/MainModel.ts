@@ -24,7 +24,13 @@ export abstract class MainModel {
    * * Initializes a new instance of the MainModel class
    */
   constructor() {
-    this.db    = getDB()
     this.query = ''
+    
+    try {
+      this.db = getDB()
+
+    } catch (err) {
+      console.error(err)
+    }
   }
 }

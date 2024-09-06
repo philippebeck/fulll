@@ -57,7 +57,19 @@ It will create a `data.db` file in the backend directory
 ## Code quality & maintainability
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5b1ae06834dc4e96b4cd4764fc738a85)](https://app.codacy.com/gh/philippebeck/fulll-tests/dashboard)
-[![Maintainability](https://api.codeclimate.com/v1/badges/1212b3e47fbe12b002dd/maintainability)](https://codeclimate.com/github/philippebeck/fulll-tests/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1212b3e47fbe12b002dd/maintainability)](https://codeclimate.com/github/philippebeck/fulll-tests/maintainability)  
+
+## CI/CD process
+
+You can consider setting up a CI/CD *(Continuous Integration/Continuous Deployment)* process to automate testing, building & deploying this application.
+
+The necessary actions could be:
+
+- Continuous Integration: Run unit & integration tests on every push to the main branch  
+- Continuous Deployment: Automatically deploy the application to a staging environment after test validation  
+- Production Deployment: Automatically deploy the application to production after manual validation  
+
+In summary, this would automate the build, test & deployment steps of this application to ensure optimal quality & speed of deployment.
 
 ## Project structure
 
