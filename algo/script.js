@@ -109,7 +109,7 @@ const generateFizzBuzz = (e) => {
   e.preventDefault();
 
   const inputElt    = document.querySelector('input');
-  const INPUT_VALUE = parseInt(inputElt.value.trim());
+  const INPUT_VALUE = parseInt(inputElt.value.trim(), 10);
   inputElt.value    = '';
 
   if (isNaN(INPUT_VALUE)) {
