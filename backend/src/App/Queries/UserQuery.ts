@@ -29,7 +29,14 @@ export class UserQuery {
    */
   constructor() {
     this.userModel = new UserModel()
-    this.user      = new User(crypto.randomUUID() as string)
+
+    try {
+      const id  = crypto.randomUUID() as string
+      this.user = new User(id)
+
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   /**
